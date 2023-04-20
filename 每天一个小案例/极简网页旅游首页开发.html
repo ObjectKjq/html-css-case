@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins',sans-serif;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/1636196637962.png);
+            background-size: cover;
+            padding-left: 8%;
+            padding-right: 8%;
+            box-sizing: border-box;
+        }
+        .navbar{
+            height: 12%;
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            width: 50px;
+            cursor: pointer;
+        }
+        .menu-icon{
+            width: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-left: 60px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+        }
+        /* 主题 */
+        .row{
+            display: flex;
+            height: 80%;
+            align-items: center;
+        }
+        .col{
+            flex-basis: 50%;
+        }
+        h1{
+            color: #fff;
+            font-size: 100px;
+        }
+        p{
+            color: #fff;
+            font-size: 11px;
+            line-height: 15px;
+        }
+        button{
+            width: 180px;
+            color: #000;
+            font-size: 12px;
+            padding: 12px 0;
+            background: #fff;
+            border: 0;
+            border-radius: 20px;
+            outline: none;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .card{
+            width: 240px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+            background-image: url(../images/1636196419825.jpg);
+        }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="../images/1650272740786.png" class="logo" alt="logo" width="150px">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">REGION</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+            </nav>
+            <img src="../images/1650272740796.png" class="menu-icon" width="50px">
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>Sahara</h1>
+                <p>Until 2020, no other member state of the United Nations had ever officially Israel.</p>
+                <button type="button">Expolre</button>
+            </div>
+            <div class="col">
+                <div class="card1 card">
+                    <h5>Western Desert</h5>
+                    <p>no other member state of the United Nations had ever officially Israel.</p>
+                </div>
+                <div class="card2 card">
+                    <h5>AI Bagawat</h5>
+                    <p>no other member state of the United Nations had ever officially Israel.</p>
+                </div>
+                <div class="card3 card">
+                    <h5>Pyramid of Giza</h5>
+                    <p>no other member state of the United Nations had ever officially Israel.</p>
+                </div>
+                <div class="card4 card">
+                    <h5>Kalahari Desert</h5>
+                    <p>no other member state of the United Nations had ever officially Israel.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --background:#e1e1e1;
+            --color-light:rgb(82, 82, 82);
+            --color-dark:rgb(128, 128, 128);
+            --text-color-light:#888;
+        }
+        body{
+            background-color: var(--background);
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+        .alignment{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            perspective: 1000px;
+            width: 300px;
+            margin: 5% auto;
+        }
+        .card .inner{
+            position: relative;
+            width: 300px;
+            height: 320px;
+        }
+        .front,.back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            height: 100%;
+            color: var(--text-color-light);
+            border-radius: 25px;
+            box-shadow: 0 0 50px 2px rgba(0,0,0,0.1);
+            background: #ffffff;
+        }
+        .back{
+            backface-visibility: hidden;
+        }
+        .avatar{
+            position: absolute;
+            width: 6em;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 5px solid var(--background);
+        }
+        .banner+.profile{
+            height: 50%;
+            margin-top: -10px;
+        }
+        .title,.subtitle,.text,.address{
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .subtitle,.address{
+            font-size: 0.8em;
+            font-weight: 400;
+            /* text-transform: uppercase; */
+        }
+        .text{
+            margin: 30% 8% 0 8%;
+        }
+        .address::before{
+            content: "";
+            display: inline-block;
+            border-top: 2px solid var(--text-color-light);
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .back{
+            transform: rotateY(180deg);
+        }
+        .card:hover .inner{
+            transform: rotateY(180deg);
+        }
+        .inner{
+            transition: transform 0.5s ease-in-out;
+            transform-style: preserve-3d;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="inner">
+            <!-- 正面 -->
+            <div class="front">
+                <div class="banner">
+                    <img src="../images/1636196419825.jpg" alt="banner" width="100%" >
+                </div>
+                <div class="profile alignment">
+                    <img src="../images/1650272740786.png" alt="avatar" width="32px" class="avatar">
+                    <h3 class="title">Call-Me_Phoenix</h3>
+                    <h3 class="subtitle">Web Designer</h3>
+                </div>
+            </div>
+            <!-- 背面 -->
+            <div class="back">
+                <div class="alignment">
+                    <p class="text">
+                        Phoenix is a Web Designer Who Currently learn By hobbies.
+                    </p>
+                    <p class="address">
+                        Call-me-phoenix<br>@kjq
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

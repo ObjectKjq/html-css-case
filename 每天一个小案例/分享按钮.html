@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eee;
+        }
+        .share-btn{
+            background: linear-gradient(30deg,#3498db,#5363d8);
+            color: #fff;
+            font-family: "Montserrat";
+            border: 0;
+            padding: 16px 40px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            border-radius: 40px;
+            transition: 0.3s;
+        }
+        .sm-btns{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            display: flex;
+            justify-content: space-around;
+            bottom: 0;
+            transform: translateY(100%);
+        }
+        .sm-btns a{
+            color: #fff;
+            transition: 0.3s;
+        }
+        .share-btn:hover{
+            border-radius: 0;
+        }
+        .text,.icon{
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .icon{
+            transition-delay: 60ms;
+        }
+        .share-btn:hover .text,
+        .share-btn:hover .icon,
+        .share-btn:hover .sm-btns a{
+            transform: translateY(-40px);
+        }
+    </style>
+</head>
+<body>
+    <button class="share-btn">
+        <span class="text">分享</span>
+        <i class="icon fas fa-share-alt"></i>
+        <div class="sm-btns">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </button>
+</body>
+</html>
